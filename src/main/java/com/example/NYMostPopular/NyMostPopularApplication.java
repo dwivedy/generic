@@ -6,10 +6,11 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 //@EnableAutoConfiguration(exclude = {ErrorMvcAutoConfiguration.class})
-@ComponentScan( {"com.example.controllers"})
+@ComponentScan({ "com.example.controllers" })
 public class NyMostPopularApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NyMostPopularApplication.class, args);
+
 	}
 }

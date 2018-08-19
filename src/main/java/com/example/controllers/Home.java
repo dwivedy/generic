@@ -14,17 +14,15 @@ import com.fasterxml.jackson.databind.ser.std.ArraySerializerBase;
 
 @Controller
 public class Home {
-	
-	
-	GetArticle article =new GetArticle();
-	
+
+	GetArticle article = new GetArticle();
+
 	@RequestMapping("/")
 	public String home(Model model) {
 		ArrayList results = article.getArticles();
-		
-		model.addAttribute("articles", results);
-//		model.addAttribute("authors", author);
-//		model.addAttribute("articleLinks", articleLink);
+		if (results != null) {
+			model.addAttribute("articles", results);
+		}
 		return "home";
 	}
 
